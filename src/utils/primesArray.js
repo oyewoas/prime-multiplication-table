@@ -2,7 +2,7 @@ import isPrime from './isPrime'
 
 //Function to list the first N primes into an array
 
-export const primeArray = noOfPrimes  => {
+export const primesArray = noOfPrimes  => {
     let primesArray = [];
     for(let i = 2; noOfPrimes > 0; i++) {
       if( isPrime(i) ) {
@@ -12,3 +12,5 @@ export const primeArray = noOfPrimes  => {
     }
     return primesArray;
   }
+
+  
