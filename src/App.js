@@ -8,7 +8,6 @@ const App = () => {
     <div>
         <Switch>
             <Route exact path='/'  component={HomePage} /> 
-    
         </Switch>
     </div>
   );
