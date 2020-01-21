@@ -1,9 +1,9 @@
 import React from 'react'
 
-import './product-table.styles.scss'
+import './multiplication-table.styles.scss'
 import uuid from 'uuid'
 
-const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
+const MultiplicaitonTable = ({arrayOfProducts, arrayOfPrimes}) => {
 
     
     const createTable = () => {
@@ -17,11 +17,9 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
        
 
         let table = []
-        // Outer loop to create parent
         for (let i = 0; i < arrayOfProducts.length; i++) {
           let children = []
 
-          //Inner loop to create children
           if(i > 0){
             children.push(<td key={uuid()}>{arrayOfPrimes[i]}</td>)
           }
@@ -29,7 +27,6 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
             children.push(<td key={j}>{arrayOfProducts[i][j]}</td>)
 
           }
-          //Create the parent and add the children
           table.push(<tr key={i}>{children}</tr>)
         }
         return table
@@ -38,7 +35,7 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
         <div className="container-fluid">
             <div className="row">
                 <div className='col-md-12'>
-                <h2 className="text-center pt-3 pb-3">Prime Products Result</h2>
+                <h2 className="text-center pt-3 pb-3">Prime Multiplication Table</h2>
                 { arrayOfProducts ? (
                     <div className="table-responsive">
                         <table className="table table-striped">
@@ -48,7 +45,7 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
                         </table>
                     </div>
                 ): (
-                    <span>No Prime Products</span>
+                    <span>Prime Multiplication Table cannot be displayed </span>
                 )}
                 </div>
             </div>
@@ -57,4 +54,4 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
     )
 }
 
-export default ProductTable
+export default MultiplicaitonTable
