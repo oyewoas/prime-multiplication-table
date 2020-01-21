@@ -6,8 +6,8 @@ import FormInput from '../form-input/form-input.component'
 import useFormValidation from '../../utils/useFormValidation'
 import FORM_VALIDATION_RULES from '../../utils/formValidationRules'
 import primesArray from '../../utils/primesArray'
-import primesProduct from '../../utils/primesProduct'
-import ProductTable from '../product-table/product-table.component'
+import primesProduct from '../../utils/primesMultiplication'
+import MultiplicationTable from '../multiplication-table/multiplication-table.component'
 
 const {calulatePrimesProduct} = FORM_VALIDATION_RULES
 
@@ -42,7 +42,7 @@ const NoOfPrimesForm = () => {
                             <div className="col-sm-1"></div>
                             <div className="col-sm-10">
                                 <CustomButton onClick={() => goBack()}>Go Back</CustomButton>
-                                <ProductTable arrayOfPrimes={primes} arrayOfProducts={products}/>
+                                <MultiplicationTable arrayOfPrimes={primes} arrayOfProducts={products}/>
                             </div>
                             <div className="col-sm-1"></div>
 

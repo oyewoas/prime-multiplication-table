@@ -1,4 +1,4 @@
-import primesProduct from "../../utils/primesProduct";
+import primesMultiplication from "../../utils/primesMultiplication";
 
 
 expect.extend({
@@ -17,7 +17,7 @@ expect.extend({
 
 describe('The product of primes utility', () => {
     it('return an array', async () => {
-        const response = primesProduct([2,5,7,9])
+        const response = primesMultiplication([2,5,7,9])
         expect(response).toBeType('array')
     });
 

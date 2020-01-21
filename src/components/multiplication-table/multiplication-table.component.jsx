@@ -1,9 +1,9 @@
 import React from 'react'
 
-import './product-table.styles.scss'
+import './multiplication-table.styles.scss'
 import uuid from 'uuid'
 
-const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
+const MultiplicaitonTable = ({arrayOfProducts, arrayOfPrimes}) => {
 
     
     const createTable = () => {
@@ -54,4 +54,4 @@ const ProductTable = ({arrayOfProducts, arrayOfPrimes}) => {
     )
 }
 
-export default ProductTable
+export default MultiplicaitonTable
