@@ -1,13 +1,13 @@
 //function to generate the products of prime numbers
 
-const primesProduct = arrayOfPrimes => {
-    let productArray = arrayOfPrimes.map((rowPrimeNumber, rowIndex) => {
+const primesMultiplication = arrayOfPrimes => {
+    let multiplicaitonArray = arrayOfPrimes.map((rowPrimeNumber, rowIndex) => {
       return arrayOfPrimes.map((columnPrimeNumber, columnIndex) => {
         return rowPrimeNumber * columnPrimeNumber;
       })
     })
-    return productArray;
+    return multiplicaitonArray;
 }
 
-export default  primesProduct
+export default  primesMultiplication
 

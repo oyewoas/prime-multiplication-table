@@ -6,7 +6,7 @@ import FormInput from '../form-input/form-input.component'
 import useFormValidation from '../../utils/useFormValidation'
 import FORM_VALIDATION_RULES from '../../utils/formValidationRules'
 import primesArray from '../../utils/primesArray'
-import primesProduct from '../../utils/primesMultiplication'
+import primesMultiplication from '../../utils/primesMultiplication'
 import MultiplicationTable from '../multiplication-table/multiplication-table.component'
 
 const {calulatePrimesProduct} = FORM_VALIDATION_RULES
@@ -18,7 +18,7 @@ const NoOfPrimesForm = () => {
     const calculatePrimesProductFunction = () => {
         const arrayOfPrimes = primesArray(values.no_of_primes)
         setPrimes(arrayOfPrimes)
-        setProducts(primesProduct(arrayOfPrimes))
+        setProducts(primesMultiplication(arrayOfPrimes))
     }
 
     const goBack = () => {
@@ -62,7 +62,7 @@ const NoOfPrimesForm = () => {
                                     name="no_of_primes" type="number" required/>
                                     {errors.no_of_primes && <p className="error-text">{errors.no_of_primes}</p>}
                                     
-                                    <div className="button" id="button">
+                                    <div className="button">
                                         <CustomButton  cl disabled={isSubmitting} type="submit">Calculate</CustomButton>
                                     </div>
                                 </form>
