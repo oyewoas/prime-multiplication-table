@@ -13,6 +13,5 @@ const primesArray = noOfPrimes => {
   return primesArray;
 }
 
-console.log(primesArray, 'primesArray')
 
 export default primesArray

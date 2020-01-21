@@ -55,15 +55,15 @@ const NoOfPrimesForm = () => {
                         <div className="row mt-5 pt-5">
                             <div className="col-md-3 col-sm-12 col-lg-3"></div>
                             <div className="col-md-6 col-sm-12 col-lg-6">
-                                <div className="legend"><h3>Input the number of primes</h3></div>
+                                <div className="legend" ><h3 id="legend">Input the number of primes</h3></div>
                                 <form onSubmit={handleSubmit}>
                                     <FormInput handleChange={handleChange} handleBlur={handleBlur}  
                                     value={values.no_of_primes} min="1" label="No Of Primes" 
                                     name="no_of_primes" type="number" required/>
                                     {errors.no_of_primes && <p className="error-text">{errors.no_of_primes}</p>}
                                     
-                                    <div className="button">
-                                        <CustomButton disabled={isSubmitting} type="submit">Calculate</CustomButton>
+                                    <div className="button" id="button">
+                                        <CustomButton  cl disabled={isSubmitting} type="submit">Calculate</CustomButton>
                                     </div>
                                 </form>
                             </div>
