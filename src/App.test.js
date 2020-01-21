@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
+afterEach(cleanup);
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('<App/>', () => {
+  it("Properly Renders the App Component", () => {
+    const { asFragment } = render(<Router><App /></Router>);
+    expect(asFragment()).toMatchSnapshot();
+  });
+})
